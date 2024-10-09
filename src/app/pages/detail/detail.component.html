@@ -1,0 +1,39 @@
+<img class="logo" src="assets/logo yugioh.png" />
+
+<div class="detail-card" *ngIf="card$ | async as card">
+  <div class="top">
+    <img [src]="card.card_images[0].image_url" />
+  </div>
+  <div class="bottom">
+    <h3 class="name-card">{{ card.name }}</h3>
+    <div>
+      <p class="description">{{ card.desc }}</p>
+    </div>
+      <div class="item">
+        <p class="title">Frametype: </p>
+        <p class="description">{{ card.frameType }}</p>
+      </div>
+      <div class="item">
+        <p class="title">Type: </p>
+        <p class="description">{{ card.type }}</p>
+      </div>
+      <div class="item">
+        <p class="title">Subtype: </p>
+        <p class="description">{{ card.race }}</p>
+      </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Market</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let market of card.card_prices[0] | keyvalue">
+          <th scope="row">{{ market.key | marketName }}</th>
+          <th>{{ market.value }} $</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

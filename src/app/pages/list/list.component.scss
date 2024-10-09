@@ -1,0 +1,25 @@
+.list {
+    width: 80%;
+    margin: auto;
+}
+.logo {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+.form-control {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    //border: 4px solid #9c9ea1;
+    border: 4px solid #0d0d0d;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+    gap: 0.5em;
+    margin-top: 2em;
+}

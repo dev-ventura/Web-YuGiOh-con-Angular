@@ -1,0 +1,21 @@
+<!--Agregando el infinite scroll-->
+<div 
+  class="list"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="100"
+    (scrolled)="onScroll()">
+  <img class="logo" src="assets/logo yugioh.png" />
+  <input
+    class="form-control"
+    type="text"
+    placeholder="Busca tu carta aqui..." [formControl]="cardTextFC">
+  
+  <div class="cards">
+    <!--Llamada de card de card (services)-->
+    <app-card 
+        *ngFor="let card of cards" 
+        [card]="card">
+    </app-card>
+  </div>  
+</div>

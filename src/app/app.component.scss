@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  margin: 0;
+  background: radial-gradient(#f2a93a 55%, #c64d17, #c24a18);
+  //background-color: #0d0d0d;
+  color: #9c9ea1;
+  flex: 1;
+  position: relative;
+
+  .cody-img{
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+  }
+}
